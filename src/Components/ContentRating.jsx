@@ -16,7 +16,7 @@ class ContentRating extends Component {
         
         handleDislike: () => {
             this.setState((prevState) => ({
-                disikes: prevState.disikes + 1
+                dislikes: prevState.dislikes + 1
             }));
         }
         
@@ -63,8 +63,8 @@ class ContentRating extends Component {
         </p>
         <div className="content-rating">    
             <div className="rating-buttons">
-                <button className='like-button'>Like ({this.state.likes}) </button>
-                <button className='dislike-button'>Dislike ({this.state.dislikes}) </button>
+                <button className='like-button' onClick={this.state.handleLike} >Like ({this.state.likes}) </button>
+                <button className='dislike-button' onClick={this.state.handleDislike}>Dislike ({this.state.dislikes}) </button>
             </div> 
         </div>
      </>
